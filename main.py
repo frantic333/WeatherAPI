@@ -5,8 +5,20 @@ from pprint import pprint
 
 import const
 
-
+'''
 def answer_user_bot(data,chat):
+    for i in const.MY_ID:
+        if chat == i:
+            data = {
+                'chat_id' : i,
+                'text': data
+            }
+            url = const.URL.format(token=const.TOKEN,
+                                   method=const.SEND_METH)
+            response = requests.post(url, data=data)
+'''
+
+def answer_user_bot(data, chat):
     for i in const.MY_ID:
         if chat == i:
             data = {
@@ -39,9 +51,11 @@ def get_weather(location):
 def get_message(data):
     return data['message']['text']
 
+
 def get_chat_id(data):
     for elem in data:
         return elem['message']['chat']['id']
+
 
 
 def save_update_id(update):

@@ -16,7 +16,7 @@ with open(UPDATE_ID_FILE_PATH) as file:
         data = int(data)
     UPDATE_ID =data
 
-WEATHER_TOKEN = 'e1dcdd65fca0c95c3e4b86de08ccdcca'
+WEATHER_TOKEN = 'ec12f0ab70736e06b73a9e3af7ee1537'
 
-WEATHER_URL = 'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={token}'
+WEATHER_URL = 'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={token}'
 
